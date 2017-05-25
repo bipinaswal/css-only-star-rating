@@ -1,0 +1,51 @@
+/*
+Css only star rating v1.0.0
+(c) 2017, https://github.com/bipinaswal
+(can be used where ratings are fetched from database and coresponding stars have to be shown on view)
+GNU General Public License v3.0
+*/
+/******* mixin ***********/
+@mixin starRating($starRatingWrapper: '', $starWidth: '', $starDormantColor: '', $starActiveColor: ''){
+    .#{$starRatingWrapper} {
+        font-size: $starWidth + px; 
+        position: relative;
+
+        &:before, &:after {
+            position: absolute;
+            left: 0; 
+            top: 0;
+            z-index: 1;
+            overflow: hidden;
+            content: '\2605 \2605 \2605 \2605 \2605';
+        }
+
+        &:before {
+            z-index: 1;
+            text-shadow: 0 0 2px rgba(0,0,0,0.7); 
+            color: $starActiveColor;
+        }
+        &:after {
+            z-index: 0;
+            color: $starDormantColor;
+        }
+
+        @each $rate in 5, 4, 3, 2, 1, 0 {
+            @each $post in 5, 0 {
+                &.rating-#{$rate}-#{$post} {
+                    @if $post == 0 {
+                        &:before {   
+                          width: ((($starWidth / 2)*($rate+($rate+1))) - ($starWidth / 2)) + px;
+                        }
+                    } @else {
+                        &:before {        
+                          width: (($starWidth / 2)*($rate+($rate+1))) + px;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
+
+/******* mixin inclusion ***********/
+@include starRating(star-rating, 18, #ddd, #f34747);

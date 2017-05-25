@@ -1,0 +1,81 @@
+/*
+Css only star rating v1.0.0
+(c) 2017, https://github.com/bipinaswal
+(can be used where ratings are fetched from database and coresponding stars have to be shown on view)
+GNU General Public License v3.0
+*/
+/******* mixin ***********/
+/******* mixin inclusion ***********/
+/* line 9, star-rating.scss */
+.star-rating {
+  font-size: 18px;
+  position: relative;
+}
+/* line 13, star-rating.scss */
+.star-rating:before, .star-rating:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  overflow: hidden;
+  content: '\2605 \2605 \2605 \2605 \2605';
+}
+/* line 22, star-rating.scss */
+.star-rating:before {
+  z-index: 1;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+  color: #f34747;
+}
+/* line 27, star-rating.scss */
+.star-rating:after {
+  z-index: 0;
+  color: #ddd;
+}
+/* line 40, star-rating.scss */
+.star-rating.rating-5-5:before {
+  width: 99px;
+}
+/* line 36, star-rating.scss */
+.star-rating.rating-5-0:before {
+  width: 90px;
+}
+/* line 40, star-rating.scss */
+.star-rating.rating-4-5:before {
+  width: 81px;
+}
+/* line 36, star-rating.scss */
+.star-rating.rating-4-0:before {
+  width: 72px;
+}
+/* line 40, star-rating.scss */
+.star-rating.rating-3-5:before {
+  width: 63px;
+}
+/* line 36, star-rating.scss */
+.star-rating.rating-3-0:before {
+  width: 54px;
+}
+/* line 40, star-rating.scss */
+.star-rating.rating-2-5:before {
+  width: 45px;
+}
+/* line 36, star-rating.scss */
+.star-rating.rating-2-0:before {
+  width: 36px;
+}
+/* line 40, star-rating.scss */
+.star-rating.rating-1-5:before {
+  width: 27px;
+}
+/* line 36, star-rating.scss */
+.star-rating.rating-1-0:before {
+  width: 18px;
+}
+/* line 40, star-rating.scss */
+.star-rating.rating-0-5:before {
+  width: 9px;
+}
+/* line 36, star-rating.scss */
+.star-rating.rating-0-0:before {
+  width: 0px;
+}
