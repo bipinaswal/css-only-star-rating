@@ -14,12 +14,20 @@ You just need to pass the following parameters when including the mixin,
 
 # Usage example ::
 
--- Html --
-<span class="star-rating rating-3-5"></span><br><!-- used to show 3.5 star rating -->
+Html :-
+```html
+<pre>
+    <span class="star-rating rating-3-5"></span><br><!-- used to show 3.5 star rating -->
+</pre>
+```
 
--- Sass Inclusion --
+Sass Inclusion :-
 @include starRating(star-rating, 18, #ddd, #f34747);
 
--- Result --
-This will generate star rating of 3.5 with element class as 'star-rating', font-size of 18px, dormant color '#ddd' and active color '#f34747'.
+Result :-
+This will generate star rating of 3.5 with 
+element class as 'star-rating', 
+font-size of 18px, 
+dormant color '#ddd' and 
+active color '#f34747'.
 
