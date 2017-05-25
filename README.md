@@ -12,6 +12,8 @@ You just need to pass the following parameters when including the mixin,
 3) 'dormant color code' for dormant ratings.
 4) 'active color code' for active ratings.
 
+eg: @include starRating(star-rating-class, font-size, #dormantColor, #activeColor);
+
 # Usage example ::
 
 Html :-
